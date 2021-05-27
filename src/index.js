@@ -1,4 +1,7 @@
-//import { createProject } from './modules/createProject'
+//Loads dom module
+const dom = require('./dom.js');
+//Executes dom module
+dom.init();
 
 //Factory function to create To-do items
 function todoItem(title, description, dueDate, priority, projectName) {
@@ -61,9 +64,6 @@ const todoList = (() => {
         //This creates a new todo item
         todoList.createNewItem(title, description, dueDate, 
             priority, projectName);
-
-        console.log("Does this work?");
-        console.log(projectArray[0][0]);
     }
 
     const createDefaultProject = function() {
